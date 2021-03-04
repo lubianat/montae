@@ -1,0 +1,13 @@
+#!/bin/bash
+
+mkdir $1
+cd $1
+touch README.md
+mkdir data src results results/figures results/tables
+touch {data,src,results}/README.md
+touch results/{figures,tables}/README.md
+
+git init
+git add .
+git commit -m "code: Start repository with Montae"
+gh repo create
